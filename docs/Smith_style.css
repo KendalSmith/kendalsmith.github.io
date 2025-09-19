@@ -1,0 +1,31 @@
+body {
+  background-color: lightblue;
+}
+p {
+  text-align: center;
+  color: black;
+  padding: 5px;
+  background: white;
+  
+}
+:root{
+  --ink: black;                /* text color */
+  --paper: beige;              /* page background */
+  --brand-gold: white;         /* accent */
+  --space-2: XXxxrem;         /* spacing scale */
+}
+body{ color: var(--ink); background: var(--paper); }
+
+header{
+  position: sticky; top: 0;
+  background: var(--brand-gold);
+  border-bottom: 3px solid rgba(230,255,230,0.95);
+}
+.tagline{ opacity: .9; font-style: italic; }
+nav{
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  padding: calc(var(--space-2) * 0.75) 0;
+}
+nav a:hover{ background: rgba(xxxx,xxxx,xxxx,xxxx); } /* input your values! */
