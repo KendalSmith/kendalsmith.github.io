@@ -1,0 +1,84 @@
+body {
+  background-color: lightblue;
+}
+p {
+  text-align: center;
+  color: black;
+  padding: 5px;
+  background: lightblue;
+  
+}
+:root{
+  --ink: black;                /* text color */
+  --paper: beige;              /* page background */
+  --brand-gold: white;         /* accent */
+  --space-2: XXxxrem;         /* spacing scale */
+}
+body{ color: var(--ink); background: var(--paper); }
+
+header{
+  position: ; top: 0;
+  background: var(--brand-gold);
+  border-bottom: 3px solid rgba(230,255,230,0.95);
+}
+.tagline{ opacity: .9; font-style: italic; }
+nav{
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  padding: calc(var(--space-2) * 0.75) 0;
+}
+nav a:hover{ background: rgba(xxxx,xxxx,xxxx,xxxx); } /* input your values! */
+
+body {
+  padding: 25px;
+  background-color: lightblue;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+footer {
+    text-align: center;
+}
+button {
+ display: inline-block;
+  border-radius: 4px;
+  background-color: lightblue;
+  border: green;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

@@ -1,31 +1,126 @@
-body {
-  background-color: lightblue;
-}
-p {
-  text-align: center;
-  color: black;
-  padding: 5px;
-  background: white;
-  
-}
 :root{
-  --ink: black;                /* text color */
-  --paper: beige;              /* page background */
-  --brand-gold: white;         /* accent */
-  --space-2: XXxxrem;         /* spacing scale */
+  --white: #F5F5F470;       /* header bg color */
+  --darkblue: #4D7C8A80;  /* page background */
+  --darkestblue: #0D173B;    /* default text color */
+  --sage: #7F9C96;        /* hover color */
+  --darkgreen: #003135;    /* header text color */
+  --orange: #7F9C9650;    /*header background color */
+  --page-width: 60ch;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --radius: 12px;
 }
-body{ color: var(--ink); background: var(--paper); }
 
-header{
-  position: sticky; top: 0;
-  background: var(--brand-gold);
-  border-bottom: 3px solid rgba(230,255,230,0.95);
+.sectionheader {
+  background-color: var(--orange); 
+  padding: 10px ; /* Add some padding for better visual appearance */
+  width: 130px;
+  height: 30px;
+  border-radius: 12px;
+  color: black;
 }
-.tagline{ opacity: .9; font-style: italic; }
-nav{
-  display: flex;
-  gap: var(--space-2);
-  justify-content: center;
-  padding: calc(var(--space-2) * 0.75) 0;
+
+/*Base*/
+html { font-family: 'Courier New', monospace;}
+body { margin: 0; color: var(--darkestblue); background: var(--darkblue); }
+img  { max-width: 100%; height: auto; display: block; }
+
+/*Type*/
+h1 { font-size: 2rem; margin: var(--space-1) 0 0; color: var(--darkgreen); text-align: center; }
+h2 { font-size: 1.5rem; margin: var(--space-4) 0 var(--space-2); color: var(--darkgreen); }
+p  { margin: 0 0 var(--space-2); line-height: 1.6; }
+a:visited { color: var(--darkgreen); }
+p a:hover { background: var(--sage); }
+
+/* Outline */
+main   { max-width: var(--page-width); margin: 0 auto; padding: var(--space-3); }
+header { position: sticky; top: 0; background: var(--white); padding: var(--space-1); }
+
+/*Navi*/
+nav { display: flex; gap: var(--space-2); justify-content: center; padding: calc(var(--darkblue) * 0.75) 0; }
+nav a { padding: 0.25rem 0.5rem; border-radius: 6px; color: var(--darkestblue); text-decoration: none; }
+nav a:hover { background: var(--sage); transition-duration: 0.3s; }
+
+
+
+/*Sections*/
+section     { border-radius: var(--radius); }
+#about      { background: var(--white);  }
+#education  { background: var(--white);  }
+#sports     { background: var(--white);  }
+#pets       { background: var(--white); }
+#contact    { background: var(--white);  }
+
+/*Section Backgrounds*/
+#about, #education, #sports, #pets, #contact {
+  scroll-margin-top: 60px; /* height of header */
+  margin: 15px;
+  padding: 30px 50px;
+  background: var(--white);
+  border: 2px solid var(--sage); 
+  border-radius: 20px;
 }
-nav a:hover{ background: rgba(xxxx,xxxx,xxxx,xxxx); } /* input your values! */
+
+/*Link colors*/
+a:link { color: var(--darkgreen); }    /*unvisited links*/
+a:active { color: var(--darkblue)}   /*color links become when clicked*/
+
+footer {
+  text-align: center;
+  background: var(--white);
+  padding: var(--space-2);
+  color: var(--darkestblue);
+  border-top: 2px solid var(--sage);
+  border-radius: 12px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: var(--white);
+  border: none;
+  color: var(--darkblue);
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 12px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+img {
+  border-radius: 12px;
+}
+
+ul.star {
+  ul {list-style: none;}
+  li:before {content: "&#10036"}
+}
