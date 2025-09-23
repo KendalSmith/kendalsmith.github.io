@@ -119,8 +119,3 @@ footer {
 img {
   border-radius: 12px;
 }
-
-ul.star {
-  ul {list-style: none;}
-  li:before {content: "&#10036"}
-}
