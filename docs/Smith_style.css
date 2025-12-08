@@ -1,11 +1,11 @@
 :root{
-  --white: #F5F5F470;       /* header bg color */
+  --white: #FFFFFF70;       /* header bg color */
   --darkblue: #4D7C8A80;  /* page background */
   --darkestblue: #0D173B;    /* default text color */
   --sage: #7F9C96;        /* hover color */
   --darkgreen: #003135;    /* header text color */
   --orange: #7F9C9650;    /*header background color */
-  --page-width: 60ch;
+  --page-width: 90%;
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -16,8 +16,8 @@
 .sectionheader {
   background-color: var(--orange); 
   padding: 10px ; /* Add some padding for better visual appearance */
-  width: 130px;
-  height: 30px;
+  width: 100%;
+  height: auto;
   border-radius: 12px;
   color: black;
 }
@@ -61,6 +61,30 @@ section     { border-radius: var(--radius); }
   background: var(--white);
   border: 2px solid var(--sage); 
   border-radius: 20px;
+}
+
+/* Dividing Sections / Flex Containter */ 
+.flex-container {
+  display: flex; /* Enables Flexbox layout */
+  justify-content: space-between; /* Distributes space between items */
+  gap: 20px; /* Adds space between the columns (modern alternative to margin) */
+  border-radius: 20px;
+  
+}
+
+.left-section {
+    flex: .5; /* Allows columns to grow and shrink equally */
+  padding: 20px;
+  border: 1px solid  #4D7C8A80;
+  border-radius: 20px;
+  background-color: var(--white);
+}
+.right-section {
+  flex: 1; /* Allows columns to grow and shrink equally */
+  padding: 20px;
+  border: 1px solid  #4D7C8A80;
+  border-radius: 20px;
+  background-color: var(--white);
 }
 
 /*Link colors*/
@@ -118,4 +142,62 @@ footer {
 }
 img {
   border-radius: 12px;
+   max-width: 50%; 
+  height: auto;
 }
+
+.right-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text-indent {
+  text-indent: 2em; /* Indents the first line by 2 times the font size */
+}
+
+ mark {
+        background-color: #fbffff;
+        color: black; /* optional: change text color for better contrast */
+        border-radius: 3px;
+        padding: 1px;
+      }
+      
+.row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Left–image layout */
+.row.img-left img {
+  order: 0;
+}
+.row.img-left .text {
+  order: 1;
+}
+
+/* Right–image layout */
+.row.img-right img {
+  order: 1;
+}
+.row.img-right .text {
+  order: 0;
+}
+
+.row img {
+  width: 50%;
+  border-radius: 12px;
+}
+
+.row .text {
+  flex: 1;
+}
+.results-box {
+  background: var(--white);
+  border: 2px solid var(--sage);
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
