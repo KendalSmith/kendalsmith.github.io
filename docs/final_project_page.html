@@ -67,24 +67,45 @@
          <h2> Main Goals </h2>
         
     <!-- Data Organization --> 
-            <details>
-              <summary> <mark> <strong> Data Organization </strong> </mark></summary>
-                 <p> I needed to organize my data into a clean data 
-                 frame including: term, definition, gender, semantic category, and chapter.
-                 </p>
-                 <p class="text-indent"> <strong> Challenges </strong> </p>
-                   <ul class="text-indent">
-                     <li> Inconsistent Layout </li>
-                     <li> Choosing Definitions </li>
-                     <li> Assigning Semantic Categories </li>
-                   </ul>
-                  <p class="text-indent"> <strong> Tools Used </strong> </p>
-                    <ul class="text-indent"> 
-                      <li> Manual Input </li>
-                      <li> Pandas </li>
-                      <li> Regex </li>
-                    </ul>
-            </details>
+            <!-- Data Organization --> 
+<details>
+  <summary> <mark> <strong> Data Organization </strong> </mark></summary>
+  
+  <div class="flex-container" style="align-items: flex-start; gap: 20px;">
+      <!-- Text on the left -->
+      <div style="flex: 1;">
+          <p> I needed to organize my data into a clean data 
+             frame including: term, definition, gender, semantic category, and chapter.
+          </p>
+          <p class="text-indent"> <strong> Challenges </strong> </p>
+          <ul class="text-indent">
+             <li> Inconsistent Layout </li>
+             <li> Choosing Definitions </li>
+             <li> Assigning Semantic Categories </li>
+          </ul>
+          <p class="text-indent"> <strong> Tools Used </strong> </p>
+          <ul class="text-indent"> 
+             <li> Manual Input </li>
+             <li> Pandas </li>
+             <li> Regex </li>
+              <ul> 
+              <li> pattern = re.compile(
+    r"([a-zāīūṛṅñṭḍṇśṣḷ\-]+)-\s*\(([mfn]\.)\)\s*‘([^’]+)’(?:\s*\((\d+)\))?\s*([a-z]+)?",
+    re.IGNORECASE
+)</li>
+              </ul>
+          </ul>
+      </div>
+
+      <!-- Image on the right -->
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+        <h3> Final Result </h3> 
+          <img src="final_df.jpeg" alt="Data Organization Diagram" style="max-width: 100%; height: auto; border-radius: 12px;">
+      </div>
+  </div>
+
+</details>
+
             <p> </p>
     <!-- Group Similarity -->
               <details>
