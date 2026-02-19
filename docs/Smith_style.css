@@ -95,6 +95,8 @@ a:active { color: var(--darkblue)}   /*color links become when clicked*/
 
 .first-line-indent {
   text-indent: 4ch;
+  display: block;
+  width: 100%;
 }
 
 
