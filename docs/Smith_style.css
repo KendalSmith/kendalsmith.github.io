@@ -201,3 +201,28 @@ img {
   margin-top: 20px;
 }
 
+
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* left smaller, right larger */
+  gap: 20px;
+  align-items: start;
+}
+
+.left-section1 {
+  grid-column: 1;
+  padding: 20px;
+  border: 1px solid #4D7C8A80;
+  border-radius: 20px;
+  background-color: var(--white);
+}
+
+.right-section1 {
+  grid-column: 2 / -1;
+  padding: 20px;
+  border: 1px solid #4D7C8A80;
+  border-radius: 20px;
+  background-color: var(--white); 
+}
+
+
