@@ -64,30 +64,13 @@ section     { border-radius: var(--radius); }
 }
 
 /* Dividing Sections / Flex Containter */ 
-#about .flex-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 20px;
+.flex-container {
+  display: flex; /* Enables Flexbox layout */
+  justify-content: space-between; /* Distributes space between items */
+  gap: 20px; /* Adds space between the columns (modern alternative to margin) */
+  border-radius: 20px;
+  
 }
-
-#about .left-section {
-  grid-column: 1;
-}
-
-#about .right-top {
-  grid-column: 2;
-}
-
-#about .right-bottom {
-  grid-column: 1 / -1; /* full width */
-}
-
-#about .flex-container::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 
 .left-section {
     flex: .5; /* Allows columns to grow and shrink equally */
@@ -216,4 +199,28 @@ img {
   border-radius: 20px;
   padding: 30px;
   margin-top: 20px;
+}
+
+
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* left smaller, right larger */
+  gap: 20px;
+  align-items: start;
+}
+
+.left-section1 {
+  grid-column: 1;
+  padding: 20px;
+  border: 1px solid #4D7C8A80;
+  border-radius: 20px;
+  background-color: var(--white);
+}
+
+.right-section1 {
+  grid-column: 2 / -1;
+  padding: 20px;
+  border: 1px solid #4D7C8A80;
+  border-radius: 20px;
+  background-color: var(--white); 
 }
