@@ -65,17 +65,19 @@ section     { border-radius: var(--radius); }
 
 /* Dividing Sections / Flex Containter */ 
 #about .flex-container {
-  display: block; /* turn off flex just here */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
 }
-
 #about .left-section {
-  float: left;
-  width: 35%;
-  margin-right: 20px;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 #about .right-section {
-  width: auto;
+  grid-column: 2;
+  grid-row: 1 / 3; /* spans down */
 }
 
 #about .flex-container::after {
