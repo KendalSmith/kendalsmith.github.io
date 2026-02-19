@@ -85,21 +85,39 @@
           </p>
           <p class="text-indent"> <strong> Challenges </strong> </p>
           <ul class="text-indent">
-             <li> Inconsistent Layout </li>
+             <li> Inconsistent Source Layout </li>
+                  <ul> 
+                      <li> In order to organize the data, the source's layout was manually edited to standardize the output.    </li>
+                  </ul>
              <li> Choosing Definitions </li>
-             <li> Assigning Semantic Categories </li>
+                  <ul> 
+                      <li>
+                         If a noun had multiple definitions that were synonyms, only the first was kept. 
+                         If there were multiple definitions that were unrelated, 
+                         then the noun was given multiple entries to account for each definition. 
+                      </li>
+                  </ul>
           </ul>
           <p class="text-indent"> <strong> Tools Used </strong> </p>
           <ul class="text-indent"> 
              <li> Manual Input </li>
-             <li> Pandas </li>
+                <ul> 
+                  <li> standardized source data format </li>
+                  <li> assign definitions </li>
+                </ul>
              <li> Regex </li>
               <ul> 
+              <li> Recompiled data into individual output strings </li>
+              <li> Code used: </li>
               <li> pattern = re.compile(
-    r"([a-zāīūṛṅñṭḍṇśṣḷ\-]+)-\s*\(([mfn]\.)\)\s*‘([^’]+)’(?:\s*\((\d+)\))?\s*([a-z]+)?",
-    re.IGNORECASE
-)</li>
+                     r"([a-zāīūṛṅñṭḍṇśṣḷ\-]+)-\s*\(([mfn]\.)\)\s*‘([^’]+)’(?:\s*\((\d+)\))?\s*([a-z]+)?",
+                     re.IGNORECASE)
+              </li>
               </ul>
+            <li> Python Pandas </li>
+                <ul> 
+                  <li> Organized recompiled data into standardized data frame </li>
+                </ul>
           </ul>
       </div>
 
